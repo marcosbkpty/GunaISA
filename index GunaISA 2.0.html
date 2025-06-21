@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUNA WARGANDI International Services Authority</title>
+  <style>
+    /* Basic Reset and Styling */
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    header { background: #004d99; color: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo img { height: 60px; }
+    #menu-toggle { background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; display: none; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+    nav li { margin-left: 20px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .hero { text-align: center; padding: 40px 20px; background: #e6f2ff; }
+    .hero h1 { margin: 0; font-size: 2rem; }
+    .hero h2 { margin: 10px 0; font-size: 1.2rem; }
+    .announcement { padding: 20px; }
+    .announcement h2 { color: #004d99; }
+    .announcement p { margin: 10px 0; }
+    .culture, .territory { padding: 40px 20px; background: #f0f8ff; }
+    .culture h2, .territory h2 { color: #004d99; margin-top: 0; }
+    .culture img, .territory img { max-width: 100%; height: auto; display: block; margin: 0 auto 20px; border: 1px solid #ccc; border-radius: 8px; }
+    .request-form { background: #f9f9f9; padding: 20px; }
+    .request-form h2 { margin-top: 0; }
+    .request-form form { display: grid; grid-gap: 10px; max-width: 500px; margin: auto; }
+    .request-form input, .request-form textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 100%; }
+    .request-form button { background: #004d99; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; }
+    .status-logos { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .status { text-align: center; margin: 10px; max-width: 200px; }
+    .status img { height: 80px; }
+    .status h3 { font-size: 1rem; margin: 10px 0; }
+    .status button { background: #004d99; color: white; border: none; padding: 5px 15px; cursor: pointer; border-radius: 4px; }
+    .warning { background: #fff3cd; color: #856404; padding: 20px; margin: 20px; border-radius: 4px; }
+    footer { background: #f1f1f1; text-align: center; padding: 15px; font-size: 0.9rem; }
+    @media (max-width: 768px) {
+      #menu-toggle { display: block; }
+      nav ul { display: none; flex-direction: column; }
+      nav ul.open { display: flex; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Updated logo with embedded text -->
+      <img src="images/gunaisa_logo_full.png" alt="GUNAISA Logo">
+    </div>
+    <button id="menu-toggle">☰ Menu</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Government</a></li>
+        <li><a href="#">G.I.S.A.</a></li>
+        <li><a href="#">Laws</a></li>
+        <li><a href="list_of_entities.html">Entities</a></li>
+        <li><a href="#">Legal Support</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#territory">Territory</a></li>
+        <li><a href="#">Compliance</a></li>
+        <li><a href="#">Agents</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>GUNA WARGANDI INTERNATIONAL SERVICES AUTHORITY</h1>
+    <h2>BEST PLACE FOR YOUR GLOBAL FINANCIAL BUSINESS!</h2>
+  </section>
+
+  <section class="announcement">
+    <h2>New Security Logo Mandate</h2>
+    <p><strong>Capital City on 20th June 2025</strong></p>
+    <p>All regulated companies must display the new G.I.S.A. security logo on premises and web pages by July 1, 2025, per the Customer Protection Act. Non‑compliance may incur fines or license suspension.</p>
+  </section>
+
+  <section class="culture" id="culture">
+    <h2>Culture of the Guna Wargandí People</h2>
+    <img src="images/AdobeStock_753418840.jpeg" alt="Guna Mola Textile">
+    <p>The Guna (Dule) are Indigenous to Panama and Colombia, famed for their mola textile art—colorful, appliquéd panels crafted by women. With matrilineal clans, they speak Dulegaya, preserve history via oral traditions in the Onmaked Nega, and their community sailas safeguard cultural rites and songs.</p>
+  </section>
+
+  <section class="territory" id="territory">
+    <h2>Territory of Guna Wargandí</h2>
+    <img src="images/AdobeStock_95705905.jpeg" alt="Guna Wargandí Rainforest">
+    <p>Established in 1983, the Comarca Kuna de Wargandí is an autonomous Indigenous territory along the Sambu River in eastern Panama. It coexists with Guna Yala and Kuna de Madugandí to self‑govern ancestral lands, protect ecosystems, and uphold traditional governance under Panamanian law.</p>
+  </section>
+
+  <section class="request-form">
+    <h2>Send Your Request</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section class="status-logos">
+    <div class="status">
+      <img src="images/status-good.png" alt="Good Standing">
+      <h3>Good Legal Standing</h3>
+      <button>OK</button>
+    </div>
+    <div class="status">
+      <img src="images/status-suspended.png" alt="Suspended Status">
+      <h3>Suspended Status</h3>
+      <p>Annual fee unpaid</p>
+      <button>OK</button>
+    </div>
+    <div class="status">
+      <img src="images/status-creating.png" alt="Creating Status">
+      <h3>Creating Status</h3>
+      <p>Company formation in progress</p>
+      <button>OK</button>
+    </div>
+  </section>
+
+  <section class="warning">
+    <p>Beware of cloned sites. Report fraud to <a href="mailto:alu@gunawargandi.org">alu@gunawargandi.org</a> and local authorities.</p>
+  </section>
+
+  <footer>
+    <p>GUNA WARGANDI International Services Authority, Registrar of Companies, PO Box 123, Capital City.</p>
+    <p>Email: <a href="mailto:info@gunawargandi.org">info@gunawargandi.org</a></p>
+    <p>© 2025 GUNA WARGANDÍ ISA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navUl = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => navUl.classList.toggle('open'));
+  </script>
+</body>
+</html>
