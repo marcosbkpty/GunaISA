@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUNA WARGANDI International Services Authority</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    header { background: #004d99; color: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo img { height: 60px; }
+    nav ul { list-style: none; display: flex; gap: 15px; margin: 0; padding: 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    #menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; }
+    .hero { text-align: center; padding: 40px 20px; background: url('images/AdobeStock_263024826.jpeg') center/cover no-repeat; color: white; }
+    .hero h1 { margin: 0; font-size: 2.5rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
+    .hero h2 { margin-top: 10px; font-size: 1.2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+    .announcement { background: #e6f2ff; padding: 20px; text-align: center; }
+    .announcement h2 { margin-top: 0; color: #004d99; }
+    .culture, .territory { padding: 40px 20px; }
+    .culture img, .territory img { width: 100%; max-width: 800px; margin: 0 auto 20px; display: block; border-radius: 8px; }
+    .culture { background: #f0f8ff; }
+    .territory { background: #f9f9f9; }
+    .request-form { background: #fff; padding: 20px; }
+    .request-form form { display: grid; gap: 10px; max-width: 500px; margin: auto; }
+    .request-form input, .request-form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; width: 100%; }
+    .request-form button { padding: 12px; border: none; border-radius: 4px; background: #004d99; color: white; cursor: pointer; }
+    .status-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; background: #e6f2ff; }
+    .status { text-align: center; max-width: 200px; }
+    .status img { width: 100px; height: auto; }
+    .warning { background: #fff3cd; padding: 20px; text-align: center; margin: 20px; border-radius: 4px; }
+    footer { background: #004d99; color: white; text-align: center; padding: 15px; }
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; }
+      nav ul.open { display: flex; }
+      #menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/gunaisa_logo_full.png" alt="GUNAISA Logo"></div>
+    <button id="menu-toggle">☰</button>
+    <nav><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="list_of_entities.html">Entities</a></li>
+      <li><a href="#culture">Culture</a></li>
+      <li><a href="#territory">Territory</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <section class="hero">
+    <h1>GUNA WARGANDI INTERNATIONAL SERVICES AUTHORITY</h1>
+    <h2>Darien, Panama</h2>
+  </section>
+
+  <section class="announcement">
+    <h2>New Security Logo Mandate</h2>
+    <p><strong>Darien on 20th June 2025</strong></p>
+    <p>All regulated companies must display the new G.I.S.A. security logo on premises and web pages by July 1, 2025. Non‑compliance may incur fines or license suspension.</p>
+  </section>
+
+  <section class="culture" id="culture">
+    <h2>Culture of the Guna Wargandí People</h2>
+    <img src="images/AdobeStock_753418840.jpeg" alt="Guna Mola Textile">
+    <p>The Guna (Dule) are Indigenous to Panama and Colombia, famed for their mola textile art—colorful, appliquéd panels crafted by women. They speak Dulegaya, preserve oral traditions via the Onmaked Nega, and socially organize through matrilineal clans.</p>
+  </section>
+
+  <section class="territory" id="territory">
+    <h2>Territory of Guna Wargandí</h2>
+    <img src="images/AdobeStock_95705905.jpeg" alt="Rainforest">
+    <p>Comarca Kuna de Wargandí is an autonomous territory in Darien along the Sambu River. Established in 1983, it self‑governs ancestral lands and protects local ecosystems within Panama’s legal framework.</p>
+  </section>
+
+  <section class="request-form" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section class="status-logos">
+    <div class="status"><img src="images/status-good.png"><h3>Good Standing</h3></div>
+    <div class="status"><img src="images/status-suspended.png"><h3>Suspended</h3></div>
+    <div class="status"><img src="images/status-creating.png"><h3>Creating</h3></div>
+  </section>
+
+  <section class="warning">
+    <p>Beware of cloned sites. Report fraud to <a href="mailto:info@gunawargandi.org">info@gunawargandi.org</a>.</p>
+  </section>
+
+  <footer>
+    <p>GUNA WARGANDI International Services Authority, Darien, Panama. © 2025</p>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click',()=>{
+      document.querySelector('nav ul').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

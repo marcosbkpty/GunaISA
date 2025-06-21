@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUNA WARGANDI - Entities Directory</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header { display: flex; align-items: center; justify-content: space-between; background: #004d99; padding: 10px 20px; color: white; }
+    .logo img { height: 60px; }
+    nav a { color: white; text-decoration: none; margin-left: 15px; font-weight: bold; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .controls input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    .controls button { padding: 8px 12px; border: 1px solid #004d99; border-radius: 4px; background: white; color: #004d99; cursor: pointer; }
+    .controls button.active { background: #004d99; color: white; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+    th { background: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/gunaisa_logo_full.png" alt="Logo"></div>
+    <nav><a href="index.html">Home</a><a href="list_of_entities.html">Entities</a></nav>
+  </header>
+
+  <h1>Entities Directory</h1>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search entities...">
+    <button class="active" data-cat="All">All</button>
+    <button data-cat="Company">Company</button>
+    <button data-cat="NGO">NGO</button>
+    <button data-cat="Society">Society</button>
+    <button data-cat="Partnership">Partnership</button>
+  </div>
+
+  <table id="directory">
+    <thead><tr><th>Name</th><th>Reg No.</th><th>Category</th><th>Status</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const data = [
+      {name:'Alpha Trading Ltd.',no:'GWA-1001',cat:'Company',status:'Active'},
+      {name:'Beta Charities',no:'GWA-1002',cat:'NGO',status:'Active'},
+      {name:'Gamma Research Society',no:'GWA-1003',cat:'Society',status:'Suspended'},
+      {name:'Delta Partnership',no:'GWA-1004',cat:'Partnership',status:'Active'}
+    ];
+    const tbody = document.querySelector('#directory tbody');
+    const search = document.getElementById('search');
+    const buttons = document.querySelectorAll('.controls button');
+    let filterCat = 'All';
+
+    function render(){
+      tbody.innerHTML = '';
+      const q = search.value.toLowerCase();
+      data.forEach(e=>{
+        if((filterCat==='All'||e.cat===filterCat) && (e.name.toLowerCase().includes(q)||e.no.toLowerCase().includes(q))){
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${e.name}</td><td>${e.no}</td><td>${e.cat}</td><td>${e.status}</td>`;
+          tbody.appendChild(tr);
+        }
+      });
+    }
+
+    search.addEventListener('input', render);
+    buttons.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        buttons.forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        filterCat = b.dataset.cat;
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>
