@@ -1,2 +1,2 @@
 # GunaISA
-Guna Internaational Services Authority
+Guna International Services Authority
